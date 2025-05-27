@@ -3,30 +3,32 @@
 ## Business Understanding
 
 ### Latar Belakang Bisnis
-Jaya Jaya Institut merupakan institusi pendidikan tinggi yang telah beroperasi sejak tahun 2000 dan telah menghasilkan banyak lulusan berkualitas. Reputasi baik institusi ini dibangun atas dasar kualitas pendidikan, tenaga pengajar yang kompeten, serta lulusan yang mampu bersaing di dunia kerja. Namun demikian, institusi ini menghadapi tantangan besar berupa tingginya angka siswa yang tidak menyelesaikan pendidikannya atau mengalami *dropout*.
+Sejak didirikan pada tahun 2000, Jaya Jaya Institut telah menjadi salah satu institusi pendidikan tinggi yang dikenal akan kualitas pendidikannya. Dengan dukungan tenaga pengajar profesional dan kurikulum yang relevan, institusi ini telah melahirkan banyak lulusan unggulan yang mampu bersaing di dunia kerja.
 
-Tingginya angka *dropout* menjadi ancaman terhadap reputasi dan kredibilitas Jaya Jaya Institut. Hal ini juga berdampak pada efisiensi operasional, target kelulusan, serta kepercayaan masyarakat terhadap institusi. Untuk itu, diperlukan langkah strategis guna meminimalkan angka *dropout* dengan cara mendeteksi siswa yang berisiko secepat mungkin, sehingga institusi dapat memberikan intervensi atau bimbingan lebih awal.
+Meski demikian, tantangan serius tengah dihadapi, yaitu tingginya jumlah mahasiswa yang tidak menyelesaikan studi atau mengalami dropout. Fenomena ini tidak hanya mengancam reputasi dan integritas institusi, tetapi juga memengaruhi efisiensi operasional, tingkat kelulusan, serta kepercayaan masyarakat terhadap kualitas pendidikan yang diberikan.
 
-Dalam rangka mendukung pengambilan keputusan yang lebih baik dan berbasis data, pihak institusi ingin memanfaatkan teknologi data science dan visualisasi data dalam bentuk **dashboard pemantauan performa siswa**. Dengan adanya dashboard ini, pihak manajemen dan tenaga pengajar dapat lebih mudah memantau perkembangan siswa, mengenali pola-pola *dropout*, dan melakukan tindakan preventif.
+Guna mengatasi permasalahan tersebut, dibutuhkan pendekatan strategis berbasis data yang memungkinkan pendeteksian dini terhadap mahasiswa yang berisiko dropout. Dengan begitu, institusi dapat melakukan intervensi secara proaktif, seperti pemberian bimbingan akademik atau dukungan lainnya.
+
+Sebagai bagian dari solusi, pengembangan dashboard pemantauan performa mahasiswa menjadi langkah penting. Dashboard ini akan membantu pihak manajemen dan pengajar dalam memantau kemajuan mahasiswa secara menyeluruh, mengidentifikasi pola-pola risiko dropout, serta mengambil keputusan yang tepat dan cepat dalam rangka menekan angka putus studi.
 
 ### Permasalahan Bisnis
 
 Berikut adalah permasalahan bisnis yang ingin diselesaikan:
 
-1. **Tingginya tingkat *dropout* siswa**  
-   Banyak siswa yang tidak menyelesaikan pendidikan mereka, sehingga memengaruhi reputasi dan target akademik institusi.
+1. **Angka dropout yang masih tinggi**  
+   Banyak mahasiswa yang tidak berhasil menyelesaikan masa studinya, yang berdampak negatif pada citra institusi serta pencapaian target kelulusan.
 
-2. **Tidak adanya sistem deteksi dini siswa berisiko *dropout***  
-   Institusi belum memiliki alat analisis berbasis data untuk mengidentifikasi siswa yang berisiko mengalami *dropout* secara lebih cepat dan akurat.
+2. **Belum tersedia sistem untuk mendeteksi risiko dropout secara dini**  
+   Saat ini institusi belum memiliki mekanisme analitik yang mampu mengidentifikasi mahasiswa berpotensi dropout dengan cepat dan tepat berdasarkan data yang ada.
 
-3. **Keterbatasan dalam memantau performa siswa secara menyeluruh**  
-   Informasi performa siswa belum tersaji dalam bentuk dashboard yang mudah dipantau dan dianalisis oleh pihak manajemen dan pengajar.
+3. **Pemantauan performa mahasiswa belum terpadu**  
+   Data akademik mahasiswa masih tersebar dan belum dikemas dalam bentuk visualisasi terpadu yang memudahkan pemantauan oleh dosen dan pihak manajemen.
 
-4. **Kurangnya intervensi berbasis data**  
-   Tanpa adanya prediksi atau segmentasi siswa berdasarkan performa dan risiko *dropout*, tindakan intervensi menjadi tidak terarah atau bahkan terlambat.
+4. **Minimnya tindakan intervensi berbasis prediksi data**  
+   Tanpa dukungan data prediktif yang jelas, langkah-langkah bimbingan dan intervensi menjadi tidak efektif karena dilakukan tanpa target yang tepat.
 
-5. **Kebutuhan akan sistem monitoring yang interaktif dan informatif**  
-   Institusi membutuhkan sistem dashboard yang dapat menampilkan kondisi performa siswa secara real-time dan dapat membantu proses pengambilan keputusan yang lebih cepat dan tepat.
+5. **Diperlukannya dashboard interaktif untuk monitoring performa**  
+   Institusi membutuhkan platform visual yang interaktif dan mudah diakses untuk menampilkan perkembangan performa mahasiswa secara real-time dan mendukung pengambilan keputusan strategis.
 
 
 ### Cakupan Proyek
