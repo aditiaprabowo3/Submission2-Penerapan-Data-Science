@@ -7,29 +7,10 @@ import pandas as pd
 model = joblib.load('model/best_model.pkl')
 
 # Judul aplikasi
-st.title('Memprediksi Status Mahasiswa Pada Jaya Jaya Institut')
+st.title('Dropout Student Detection')
 
 # Deskripsi aplikasi
 st.write("Masukkan data berikut untuk mendapatkan prediksi status mahasiswa (Graduated, Dropout, atau Enrolled).")
-
-# Input Marital Status
-marital_status_options = {
-    'Single': 1,
-    'Married': 2,
-    'Widower': 3,
-    'Divorced': 4,
-    'Facto Union': 5,
-    'Legally Separated': 6
-}
-
-marital_status = st.selectbox(
-    "Status Pernikahan",
-    options=list(marital_status_options.keys()),
-    help="1 – Single, 2 – Married, 3 – Widower, 4 – Divorced, 5 – Facto Union, 6 – Legally Separated"
-)
-
-# Ambil value numeric dari pilihan
-marital_status_value = marital_status_options[marital_status]
 
 # Input Application Mode
 application_mode_options = {
@@ -60,6 +41,26 @@ application_mode = st.selectbox(
 )
 
 application_mode_value = application_mode_options[application_mode]
+
+
+# Input Marital Status
+marital_status_options = {
+    'Single': 1,
+    'Married': 2,
+    'Widower': 3,
+    'Divorced': 4,
+    'Facto Union': 5,
+    'Legally Separated': 6
+}
+
+marital_status = st.selectbox(
+    "Status Pernikahan",
+    options=list(marital_status_options.keys()),
+    help="1 – Single, 2 – Married, 3 – Widower, 4 – Divorced, 5 – Facto Union, 6 – Legally Separated"
+)
+
+# Ambil value numeric dari pilihan
+marital_status_value = marital_status_options[marital_status]
 
 # Input Application Order dengan Skala
 application_order = st.slider(
