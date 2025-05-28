@@ -30,7 +30,6 @@ Berikut adalah permasalahan bisnis yang ingin diselesaikan:
 5. **Diperlukannya dashboard interaktif untuk monitoring performa**  
    Institusi membutuhkan platform visual yang interaktif dan mudah diakses untuk menampilkan perkembangan performa mahasiswa secara real-time dan mendukung pengambilan keputusan strategis.
 
-
 ### Cakupan Proyek
 
 Proyek ini bertujuan untuk membantu **Jaya Jaya Institut** dalam menurunkan tingkat *dropout* siswa melalui pendekatan berbasis data dan visualisasi interaktif. Cakupan proyek difokuskan pada pemanfaatan data performa siswa, analisis prediktif, serta pengembangan dashboard pemantauan performa yang informatif dan mudah digunakan. Berikut adalah ruang lingkup yang dikerjakan dalam proyek ini:
