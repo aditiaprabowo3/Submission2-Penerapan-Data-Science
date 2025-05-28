@@ -77,7 +77,6 @@ Dengan cakupan proyek ini, diharapkan Jaya Jaya Institut dapat:
 - Mengambil langkah intervensi yang lebih tepat sasaran.
 - Menurunkan angka *dropout* dan meningkatkan tingkat kelulusan secara berkelanjutan.
 
-
 ### Persiapan
 
 **Sumber Data:**  
@@ -230,7 +229,6 @@ X[numerical_cols] = scaler.fit_transform(X[numerical_cols])
 ```
 Dengan preprocessing ini, data sudah siap untuk digunakan dalam proses pelatihan model prediksi status kelulusan siswa. 
 
-
 5. **Model Training**
 
 Pada tahap ini, kita akan membagi dataset menjadi data pelatihan dan data pengujian. Kemudian, kita akan melatih beberapa model machine learning untuk memprediksi nilai 'Status Siawa' (Apakah Siswa tersebut akan di Dropout/Graduate/Enrolled).
@@ -314,7 +312,6 @@ Didapatkan hasil evaluasinya seperti ini :
 | KNN                 | 0.6667  | 0.6497    | 0.6667  | 0.6557   |
 
 ✅ **Model terbaik adalah:** Random Forest dengan akurasi **0.7887**
-
 
 ## Business Dashboard
 
