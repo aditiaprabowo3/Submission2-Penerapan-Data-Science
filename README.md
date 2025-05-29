@@ -369,7 +369,7 @@ Dashboard ini merupakan **Dashboard Analitik Mahasiswa** yang bertujuan untuk me
 
 Untuk menjalankan prototype sistem machine learning yang telah dibuat, ikuti langkah-langkah berikut ini:
 
-> **Link Akses Dashboard**: [Lihat di StreamlitOnline](https://aditiaprabowo3submission2-penerapan-data-science-cxutdepbmbzyz.streamlit.app/)
+> **Link Akses Streamlit**: [Lihat di StreamlitOnline](https://aditiaprabowo3submission2-penerapan-data-science-cxutdepbmbzyz.streamlit.app/)
 
 ![screencapture-aditiaprabowo3submission2-penerapan-data-science-cxutdepbmbzyz-streamlit-app-2025-05-29-14_47_42](https://github.com/user-attachments/assets/50135b8a-5f7d-4fd1-aa09-1e1663f7579c)
 
