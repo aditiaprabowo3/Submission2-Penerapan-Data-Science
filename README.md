@@ -80,8 +80,12 @@ Dengan cakupan proyek ini, diharapkan Jaya Jaya Institut dapat:
 ### Persiapan
 
 **Sumber Data:**  
-Dataset yang digunakan dalam proyek ini dapat diakses melalui tautan berikut:  
-[Students Performance Data - Dicoding Dataset](https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/data.csv)
+
+Dataset yang digunakan berasal dari Jaya Jaya Institut, sebuah institusi pendidikan tinggi yang telah berdiri sejak tahun 2000. Selama bertahun-tahun, institusi ini telah mencetak banyak lulusan dengan reputasi baik, namun juga menghadapi tantangan berupa tingginya angka siswa yang tidak menyelesaikan pendidikannya (dropout).
+
+Tingginya angka dropout ini menjadi perhatian serius karena dapat memengaruhi citra dan kualitas institusi. Oleh karena itu, dataset ini digunakan untuk membangun model prediktif yang dapat mengidentifikasi siswa yang berpotensi mengalami dropout, sehingga intervensi atau bimbingan khusus dapat diberikan sejak dini.
+
+Dataset dapat diakses melalui: [Students Performance Data - Dicoding Dataset](https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/data.csv)
 
 **Setup Environment untuk Google Colab:**
 
@@ -302,18 +306,20 @@ print(f"\n✅ Model terbaik adalah: {best_model['Model']} dengan akurasi: {best_
 Didapatkan hasil evaluasinya seperti ini :
 ## 📊 Hasil Evaluasi Model
 
-| Model               | Akurasi | Precision | Recall  | F1-Score |
-|---------------------|---------|-----------|---------|----------|
-| Random Forest       | 0.7887  | 0.7806    | 0.7887  | 0.7780   |
-| Logistic Regression | 0.7684  | 0.7500    | 0.7684  | 0.7531   |
-| XGBoost             | 0.7672  | 0.7603    | 0.7672  | 0.7622   |
-| SVM                 | 0.7593  | 0.7478    | 0.7593  | 0.7466   |
-| Decision Tree       | 0.6870  | 0.6914    | 0.6870  | 0.6891   |
-| KNN                 | 0.6667  | 0.6497    | 0.6667  | 0.6557   |
+| Model               | Akurasi  | Precision | Recall   | F1-Score |
+|---------------------|----------|-----------|----------|----------|
+| Logistic Regression  | 0.768362 | 0.749981  | 0.768362 | 0.753128 |
+| XGBoost             | 0.767232 | 0.760310  | 0.767232 | 0.762175 |
+| SVM                 | 0.759322 | 0.747835  | 0.759322 | 0.746566 |
+| Random Forest       | 0.758192 | 0.738042  | 0.758192 | 0.739192 |
+| Decision Tree       | 0.692655 | 0.695854  | 0.692655 | 0.694190 |
+| KNN                 | 0.666667 | 0.649668  | 0.666667 | 0.655683 |
 
-✅ **Model terbaik adalah:** Random Forest dengan akurasi **0.7887**
+✅ **Model terbaik adalah:** Logistic Regression dengan akurasi **0.768362**
 
 ## Business Dashboard
+
+![Screenshot (1780)](https://github.com/user-attachments/assets/8f96bc19-651e-4cda-a5b4-a372a60b814e)
 
 Dashboard ini merupakan **Dashboard Analitik Mahasiswa** yang bertujuan untuk memvisualisasikan data terkait **status akademik mahasiswa** berdasarkan berbagai faktor seperti status pendaftaran, kelompok usia, jurusan, serta rata-rata nilai semester. Dashboard ini membantu institusi pendidikan dalam memantau performa mahasiswa dan mengidentifikasi potensi masalah seperti dropout.
 
@@ -321,17 +327,17 @@ Dashboard ini merupakan **Dashboard Analitik Mahasiswa** yang bertujuan untuk me
 
 1. **Distribusi Mahasiswa Berdasarkan Status**
    - Menampilkan persentase mahasiswa dengan status:
-     - **Enrolled**: 49.6%
+     - **Graduate**: 49.6%
      - **Dropout**: 32.1%
-     - **Graduate**: 17.9%
+     - **Enrolled**: 17.9%
    - Ditampilkan dalam bentuk diagram lingkaran.
 
 2. **Jumlah Total Mahasiswa**
    - Tercatat sebanyak **4.424 mahasiswa** yang dianalisis dalam dashboard ini.
 
 3. **Nilai Rata-Rata Semester**
-   - **Grade Semester 1**: 9,12  
-   - **Grade Semester 2**: 11
+   - **Grade Semester 1**: 10,64  
+   - **Grade Semester 2**: 10,23
 
 4. **Status Mahasiswa Berdasarkan Kelompok Usia**
    - Visualisasi menunjukkan distribusi status (Dropout, Graduate, Enrolled) berdasarkan kelompok umur: 17–20, 21–24, 25–29, 30–35, dan >35 tahun.
@@ -341,72 +347,44 @@ Dashboard ini merupakan **Dashboard Analitik Mahasiswa** yang bertujuan untuk me
      - Graduate memiliki nilai tertinggi.
      - Dropout memiliki rata-rata nilai terendah.
 
-6. **Status Berdasarkan Jurusan**
-   - Perbandingan jumlah mahasiswa berdasarkan status akademik di tiap jurusan, seperti:
-     - Management
-     - Accounting
-     - Engineering
-     - Computer Science
-     - Others
-   - Memberikan wawasan mengenai jurusan dengan tingkat dropout atau kelulusan yang tinggi.
-
 ### Akses Dashboard
 
-[Dashboard Looker Studio](https://lookerstudio.google.com/reporting/5a22d124-d64b-4eb9-ab12-281641d97d08)
+[Dashboard Looker Studio](https://lookerstudio.google.com/reporting/f1870669-99d3-4ffb-9269-2d5d3a17f725)
 
 ---
 
-Dashboard ini sangat bermanfaat bagi pihak kampus atau akademik untuk melakukan evaluasi kinerja pendidikan, meningkatkan tingkat kelulusan, dan mengurangi angka putus studi.
+## Tujuan Dashboard:
 
+- Memantau kinerja akademik mahasiswa
+- Meningkatkan tingkat kelulusan
+- Mengurangi angka droupout
+- Mengidentifikasi mahasiswa berisiko droupout
+- Mendukung pengambilan keputusan berbasis data
+- Mengevaluasi efektivitas program akademik
+- Memfasilitasi komunikasi antar departemen akademik
 
-## 🚀 Menjalankan Sistem Machine Learning
+## Menjalankan Sistem Machine Learning
 
-Untuk menjalankan prototipe sistem machine learning yang telah dibuat, pengguna dapat mengakses aplikasi melalui browser dengan mengunjungi tautan berikut:
+Untuk menjalankan prototype sistem machine learning yang telah dibuat, ikuti langkah-langkah berikut ini:
 
-🔗 **[Aplikasi Auliya Sabrina](https://submissionakhir-datascience-auliyasbrn.streamlit.app/)**
+> **Link Akses Dashboard**: [Lihat di StreamlitOnline](https://aditiaprabowo3-business-dashboard-app-julqkf.streamlit.app/)
 
-Aplikasi ini dibuat menggunakan **Streamlit** dan telah di-*deploy* secara online agar dapat diakses oleh siapa saja tanpa perlu menginstal aplikasi secara lokal.
+![prediksi impement](https://github.com/user-attachments/assets/8d5654d5-2bd9-4fd4-8e10-5f35914055dc)
+dengan prototype machine learning ini perusahaan dapat **meningkatkan retensi karyawan, mengurangi biaya rekrutmen, serta menciptakan lingkungan kerja yang lebih stabil dan produktif.**
 
-### 🧭 Langkah Penggunaan:
+Untuk menjalankan proyek ini secara lokal, silakan ikuti panduan berikut:
 
-1. Buka tautan aplikasi di atas menggunakan browser.
-2. Isi setiap bagian dari form input sesuai dengan penjelasan pada tabel berikut:
+### Clone Repository
 
----
+Clone repositori ke komputer lokal Anda menggunakan perintah berikut:
 
-### 🧾 Langkah-langkah Input Data
+```bash
+git clone https://github.com/aditiaprabowo3/Business-Dashboard.git
+cd Business-Dashboard
+python -m venv env
+venv\Scripts\activate
+pip install -r requirements.txt
 
-| **Field**                      | **Deskripsi**                                                                 |
-|-------------------------------|------------------------------------------------------------------------------|
-| **Status Pernikahan**          | Pilih status pernikahan mahasiswa *(Single, Married, dsb)*.                  |
-| **Application Mode**           | Jalur pendaftaran yang diambil oleh mahasiswa.                              |
-| **Application Order**          | Urutan pilihan program studi *(0 = pilihan pertama)*.                        |
-| **Course**                     | Jurusan/program studi mahasiswa.                                             |
-| **Daytime/Evening Attendance** | Pilih apakah mahasiswa hadir di siang hari atau malam.                      |
-| **Previous Qualification**     | Tingkat pendidikan terakhir mahasiswa.                                       |
-| **Previous Qualification Grade** | Nilai akhir dari pendidikan sebelumnya *(0 - 200)*.                          |
-| **Nationality**                | Kewarganegaraan mahasiswa.                                                  |
-| **Mother's Qualification**     | Kualifikasi pendidikan ibu mahasiswa.                                       |
-| **Father's Qualification**     | Kualifikasi pendidikan ayah mahasiswa.                                      |
-| **Dan seterusnya...**          |
-
-> Setelah semua data diisi, akan muncul tombol untuk mendapatkan hasil **prediksi status mahasiswa**.
-
----
-
-## 🧠 Output yang Akan Ditampilkan
-
-Setelah seluruh input diberikan:
-
-1. Model akan memproses data yang telah dimasukkan.
-2. Status mahasiswa akan ditampilkan sebagai hasil prediksi, berupa:
-   - `Graduated`
-   - `Dropout`
-   - `Enrolled`
-
----
-
-Sistem ini secara otomatis menjalankan model machine learning yang telah dilatih sebelumnya dan menampilkan hasil analisis secara **interaktif** langsung di browser.
 
 
 
