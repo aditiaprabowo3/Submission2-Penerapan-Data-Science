@@ -105,7 +105,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.linear_model import LogisticRegression
@@ -114,10 +113,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-
 import xgboost as xgb
 from sklearn.metrics import accuracy_score
 import joblib
+from sklearn.utils import resample
+from sklearn.utils import shuffle
 ```
 3. **Menyiapkan Dataset yang Digunakan**
 
@@ -125,7 +125,8 @@ Pada langkah ini, kita akan memulai dengan membaca dataset yang telah disediakan
 
 ```python
 # Membaca dataset
-df = pd.read_csv("/content/drive/MyDrive/Laskar Ai/Data/data_pendidikan/data.csv", sep=';')
+dataset = "https://raw.githubusercontent.com/dicodingacademy/dicoding_dataset/main/students_performance/data.csv"
+df = pd.read_csv(dataset, sep=';')
 ```
 
 Setelah membaca dataset, kita akan menampilkan beberapa informasi awal, seperti 5 data teratas, tipe data dari setiap kolom, jumlah nilai unik untuk setiap kolom kategorikal, serta analisis deskriptifnya.
@@ -308,14 +309,15 @@ Didapatkan hasil evaluasinya seperti ini :
 
 | Model               | Akurasi  | Precision | Recall   | F1-Score |
 |---------------------|----------|-----------|----------|----------|
-| Logistic Regression  | 0.768362 | 0.749981  | 0.768362 | 0.753128 |
+| Random Forest       | 0.771751 | 0.757113  | 0.771751 | 0.755995 |
+| Logistic Regression | 0.768362 | 0.749981  | 0.768362 | 0.753128 |
 | XGBoost             | 0.767232 | 0.760310  | 0.767232 | 0.762175 |
 | SVM                 | 0.759322 | 0.747835  | 0.759322 | 0.746566 |
-| Random Forest       | 0.758192 | 0.738042  | 0.758192 | 0.739192 |
-| Decision Tree       | 0.692655 | 0.695854  | 0.692655 | 0.694190 |
+| Decision Tree       | 0.693785 | 0.699507  | 0.693785 | 0.696455 |
 | KNN                 | 0.666667 | 0.649668  | 0.666667 | 0.655683 |
 
-✅ **Model terbaik adalah:** Logistic Regression dengan akurasi **0.768362**
+
+✅ **Model terbaik adalah:** Random Forest dengan akurasi **0.7718**
 
 ## Business Dashboard
 
@@ -367,9 +369,10 @@ Dashboard ini merupakan **Dashboard Analitik Mahasiswa** yang bertujuan untuk me
 
 Untuk menjalankan prototype sistem machine learning yang telah dibuat, ikuti langkah-langkah berikut ini:
 
-> **Link Akses Dashboard**: [Lihat di StreamlitOnline](https://aditiaprabowo3-business-dashboard-app-julqkf.streamlit.app/)
+> **Link Akses Dashboard**: [Lihat di StreamlitOnline](https://aditiaprabowo3submission2-penerapan-data-science-cxutdepbmbzyz.streamlit.app/)
 
-![prediksi impement](https://github.com/user-attachments/assets/8d5654d5-2bd9-4fd4-8e10-5f35914055dc)
+![screencapture-aditiaprabowo3submission2-penerapan-data-science-cxutdepbmbzyz-streamlit-app-2025-05-29-14_47_42](https://github.com/user-attachments/assets/50135b8a-5f7d-4fd1-aa09-1e1663f7579c)
+
 dengan prototype machine learning ini perusahaan dapat **meningkatkan retensi karyawan, mengurangi biaya rekrutmen, serta menciptakan lingkungan kerja yang lebih stabil dan produktif.**
 
 Untuk menjalankan proyek ini secara lokal, silakan ikuti panduan berikut:
@@ -391,36 +394,29 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-
 ## Conclusion
+Melalui analisis data dan visualisasi interaktif dalam bentuk business dashboard, beberapa insight penting berhasil diperoleh:
 
-Proyek ini bertujuan untuk menganalisis data mahasiswa berdasarkan status akademik, kelompok usia, jurusan, dan nilai rata-rata semester. Berdasarkan visualisasi dalam **Student Dashboard Analytic**, ditemukan beberapa temuan penting:
-
-- Mayoritas mahasiswa berada pada status **Enrolled** (49,6%), diikuti oleh **Dropout** (32,1%), dan **Graduate** (17,9%).
-- Jumlah mahasiswa tertinggi berada pada kelompok usia **17–20 tahun**, yang didominasi oleh status Dropout dan Enrolled.
-- Jurusan tertentu memiliki tingkat Dropout dan Graduate yang signifikan, menunjukkan variasi performa akademik antar program studi.
+- Mayoritas mahasiswa berada pada status **Graduate** (49,6%), diikuti oleh **Dropout** (32,1%), dan **Enrolled** (17,9%).
+- Jumlah mahasiswa tertinggi berada pada kelompok usia **17–20 tahun**, yang didominasi oleh status Graduate, Dropout dan Enrolled.
 - Mahasiswa dengan status **Graduate** memiliki **rata-rata nilai semester tertinggi**, sedangkan mahasiswa **Dropout** cenderung memiliki nilai terendah.
-- Terdapat peningkatan nilai rata-rata dari Semester 1 (9,12) ke Semester 2 (11), menunjukkan adanya perkembangan akademik.
-
-Secara keseluruhan, dashboard ini memberikan gambaran komprehensif yang dapat digunakan oleh institusi untuk mengevaluasi kualitas pembelajaran, mengidentifikasi potensi masalah akademik, dan merancang strategi peningkatan mutu pendidikan.
+- Terdapat penurunan nilai rata-rata dari Semester 1 (10.64) ke Semester 2 (10.23), menunjukkan adanya penurunan performa akademik.
 
 ---
 
 ### Rekomendasi Action Items
 
-- **Program Intervensi Dini untuk Mahasiswa Rentan Dropout**  
+1. **Program Intervensi Dini untuk Mahasiswa Rentan Dropout**  
   Identifikasi mahasiswa dengan performa rendah dan lakukan pendekatan akademik atau konseling untuk meningkatkan keterlibatan belajar.
 
-- **Analisis Lanjutan Berdasarkan Jurusan**  
+2. **Analisis Lanjutan Berdasarkan Jurusan**  
   Evaluasi jurusan dengan tingkat Dropout tinggi untuk mengetahui penyebabnya, apakah dari kurikulum, metode pengajaran, atau faktor eksternal lainnya.
 
-- **Optimalisasi Bimbingan Akademik**  
+3. **Optimalisasi Bimbingan Akademik**  
   Tingkatkan peran dosen pembimbing untuk memantau perkembangan mahasiswa dan memberikan dukungan yang tepat waktu.
 
-- **Penyesuaian Strategi Pengajaran Berdasarkan Usia**  
+4. **Penyesuaian Strategi Pengajaran Berdasarkan Usia**  
   Sesuaikan pendekatan pembelajaran dengan karakteristik kelompok usia tertentu agar lebih efektif dalam mendorong kelulusan.
 
-- **Pemanfaatan Data Secara Berkelanjutan**  
+5. **Pemanfaatan Data Secara Berkelanjutan**  
   Gunakan dashboard ini sebagai alat monitoring berkala untuk pengambilan keputusan berbasis data dalam meningkatkan performa akademik secara menyeluruh.
-
-Dengan implementasi strategi berbasis data ini, diharapkan institusi pendidikan dapat meningkatkan tingkat kelulusan, mengurangi angka dropout, serta menciptakan sistem pendidikan yang lebih adaptif dan responsif.
