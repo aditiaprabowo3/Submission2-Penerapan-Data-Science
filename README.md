@@ -373,8 +373,6 @@ Untuk menjalankan prototype sistem machine learning yang telah dibuat, ikuti lan
 
 ![screencapture-aditiaprabowo3submission2-penerapan-data-science-cxutdepbmbzyz-streamlit-app-2025-05-29-14_47_42](https://github.com/user-attachments/assets/50135b8a-5f7d-4fd1-aa09-1e1663f7579c)
 
-dengan prototype machine learning ini perusahaan dapat **meningkatkan retensi karyawan, mengurangi biaya rekrutmen, serta menciptakan lingkungan kerja yang lebih stabil dan produktif.**
-
 Untuk menjalankan proyek ini secara lokal, silakan ikuti panduan berikut:
 
 ### Clone Repository
