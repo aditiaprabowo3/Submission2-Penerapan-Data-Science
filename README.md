@@ -379,13 +379,17 @@ Untuk menjalankan proyek ini secara lokal, silakan ikuti panduan berikut:
 Clone repositori ke komputer lokal Anda menggunakan perintah berikut:
 
 ```bash
-git clone https://github.com/aditiaprabowo3/Business-Dashboard.git
+git clone https://github.com/aditiaprabowo3/Submission2-Penerapan-Data-Science.git
 cd Business-Dashboard
 python -m venv env
 venv\Scripts\activate
 pip install -r requirements.txt
 
-
+```
+### Menjalankan Prediksi pada streamlit
+```bash
+streamlit run app.py
+```
 
 
 ## Conclusion
