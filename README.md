@@ -316,7 +316,6 @@ Didapatkan hasil evaluasinya seperti ini :
 | Decision Tree       | 0.693785 | 0.699507  | 0.693785 | 0.696455 |
 | KNN                 | 0.666667 | 0.649668  | 0.666667 | 0.655683 |
 
-
 ✅ **Model terbaik adalah:** Random Forest dengan akurasi **0.7718**
 
 ## Business Dashboard
