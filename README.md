@@ -176,6 +176,7 @@ for i, col in enumerate(numerical_cols[:6]):
 plt.tight_layout()
 plt.show()
 ```
+
 Selanjutnya, dilakukan visualisasi data kategorikal untuk mengetahui frekuensi kemunculan tiap kategori dalam kolom yang bersifat kategorikal.
 
 ```python
